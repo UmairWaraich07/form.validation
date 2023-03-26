@@ -1,0 +1,262 @@
+/**
+    * ! basic styling
+ **/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+svg,
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/**
+* !styles for content section
+**/
+.content {
+    background-color: #f2796e;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em 1em;
+    border-radius: 0 0 .5em .5em;
+}
+
+.image {
+    background-image: url('/images/illustration.svg');
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    background-size: contain;
+    background-position: center;
+
+}
+
+.text {
+    color: #fff;
+    text-align: center;
+}
+
+@media (min-width:700px) {
+    .container {
+        min-height: 100vh;
+    }
+
+    .content {
+        justify-content: space-around;
+        padding: 1em 3em;
+    }
+}
+
+/**
+* !styles for form section
+**/
+
+.question {
+    font-size: .9rem;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.question span {
+    color: #f2796e;
+    cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.btn-container a {
+    text-decoration: none;
+}
+
+.btn-1,
+.btn-2 {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #c4c4c4;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    padding: .5em;
+    border-radius: .5em;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+}
+
+.btn-2 {
+    background-color: #4f70b5;
+    color: #fff;
+    border: 2px solid #4f70b5;
+}
+
+.or {
+    font-size: 1.125rem;
+    text-align: center;
+    margin: 1em 0;
+    font-weight: bold;
+}
+
+
+/**
+* !styles for form section
+**/
+form {
+    width: 100%;
+    padding: 2em 1em;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+form div input {
+    width: 100%;
+    padding: .8em 2.5em;
+    border-radius: .5em;
+    border: 2px solid #c4c4c4;
+    outline: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    margin-bottom: .3em;
+}
+
+form div input:focus-within {
+    border: 2px solid #f2796e;
+}
+
+form div label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: .4em;
+}
+
+@media (min-width:500px) {
+    .btn-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .btn-1,
+    .btn-2 {
+        width: 100%;
+    }
+
+    .content,
+    form {
+        padding-inline: 2em;
+    }
+}
+
+@media (min-width:700px) {
+    form {
+        padding: 2em 3em;
+    }
+
+    .form-title {
+        text-align: left;
+    }
+
+    .question {
+        text-align: left;
+    }
+}
+
+/**
+    * ! styles for button
+**/
+
+button {
+    border: none;
+    padding: 1em 1.5em;
+    background-color: #f2796e;
+    color: #fff;
+    border-radius: .5em;
+    margin-top: 1.5em;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .2s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    font-family: inherit;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+/** 
+    * ! styles for form input icons 
+**/
+
+form div {
+    position: relative;
+}
+
+form div i {
+    position: absolute;
+    padding: 10px;
+}
+
+.failure,
+.success {
+    right: 0;
+    opacity: 0;
+}
+
+.failure {
+    color: red;
+}
+
+.success {
+    color: green
+}
+
+/**
+ * ! style for error class in form 
+**/
+.error {
+    color: red;
+    font-size: .9rem;
+    margin-bottom: 1em;
+}
+
+/**
+ * ! media queries 
+**/
+
+@media (min-width:700px) {
+    .container {
+        display: flex;
+    }
+
+    .content {
+        width: 45%;
+    }
+
+    form {
+        width: 55%;
+    }
+
+}
